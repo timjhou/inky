@@ -31,8 +31,10 @@ if inky_display.resolution in ((212, 104), (250, 122)):
     if inky_display.resolution == (250, 122):
         if inky_display.colour == 'black':
             img = Image.open(os.path.join(PATH, "phat/resources/InkypHAT-250x122-bw.png"))
+            img = img.rotate(angle=180)
         else:
             img = Image.open(os.path.join(PATH, "phat/resources/InkypHAT-250x122.png"))
+            img = img.rotate(angle=180)
 
     else:
         if inky_display.colour == 'black':
